@@ -1,0 +1,7 @@
+- camera (pi compatible)
+  - w/ camera cable
+- raspbery pi
+- wifi adapter for pi
+- waterproof box for pi
+- micro usb charger for pi
+- sd card for pi
