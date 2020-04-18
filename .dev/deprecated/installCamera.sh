@@ -1,3 +1,6 @@
+# go to home dir
+cd ~
+
 # clone dependencies
 git clone https://github.com/ArduCAM/MIPI_Camera.git
 
@@ -32,3 +35,12 @@ sudo nano /boot/config.txt # gpu_mem=180
 sudo pip install v4l2
 sudo pip install numpy
 sudo apt-get install python-opencv
+
+# to take photo w/ the c library
+~/MIPI_Camera/RPI/capture
+
+
+~/MIPI_Camera/RPI/arducamstill
+
+# to take photo w/ the python library
+python ~/MIPI_Camera/RPI/python/capture.py
