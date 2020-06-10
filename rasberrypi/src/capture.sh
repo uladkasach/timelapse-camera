@@ -1,3 +1,4 @@
 # take photo with camera and download it to device
-mkdir -p ./shots # create dir if dne
-gphoto2 --capture-image-and-download --filename './shots/%Y-%m-%dT%H:%M:%SZ.%f.%C'
+BASEDIR=$(dirname "$0");
+mkdir -p $BASEDIR/shots; # create dir if dne
+gphoto2 --capture-image-and-download --filename "$BASEDIR/shots/%Y-%m-%dT%H:%M:%SZ.%f.%C";
