@@ -3,7 +3,7 @@
 crontab -l > mycron
 
 #echo new cron into cron file
-echo "* * * * * /home/pi/captureEvery15SecondsAndThenClean.sh" >> mycron
+echo "* * * * * /home/pi/timelapse/captureEvery15SecondsAndThenClean.sh" >> mycron
 
 #install new cron file
 crontab mycron
