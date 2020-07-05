@@ -7,8 +7,9 @@ mkdir -p $BASEDIR/tmp;
 mkdir -p $BASEDIR/tmp/$UPLOAD_ID;
 mv $BASEDIR/shots/* $BASEDIR/tmp/$UPLOAD_ID/;
 
-# 2. upload from the tmp upload dir to s3
-aws s3 mv --recursive --exclude ".gitignore" $BASEDIR/tmp/$UPLOAD_ID/ s3://timelapse-camera-photos/shots
+# 2. upload from the tmp upload dir to s3 (w/ date prefix)
+DATE=$(date '+%Y-%m-%d');
+aws s3 mv --recursive --exclude ".gitignore" $BASEDIR/tmp/$UPLOAD_ID/ s3://timelapse-camera-photos/shots-by-date/$DATE
 
 # 3. cleanup after self
 rm -r $BASEDIR/tmp/$UPLOAD_ID;
